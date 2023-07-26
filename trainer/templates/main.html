@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %} Main page {% endblock %}
+
+{% block content %}
+
+<style>
+    .main-start-button {
+        font-size: x-large;
+        background-color: lightgray;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        color: black;
+        text-decoration: none;
+        padding: 15px 25px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .main-start-button:hover {
+        background-color: aquamarine;
+        color: black;
+    }
+</style>
+
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-md-4 text-center">
+            <a href="{% url 'trainer:words_task' %}" class="main-start-button btn btn-primary">
+                Trainer page
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
